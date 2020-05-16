@@ -56,9 +56,11 @@ export class LoginComponent implements OnInit {
     this.loadingBar.complete()
     this.successMessage()
     if (this.loginForm.value.username == 'admin') {
+      this.authService.userRole = 1
       this.navigatePage('dashboard-admin')
     }
     else if (this.loginForm.value.username == 'user') {
+      this.authService.userRole = 2
       this.navigatePage('dashboard-user')
     }
   }
