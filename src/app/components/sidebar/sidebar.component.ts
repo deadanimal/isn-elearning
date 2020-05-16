@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router
-  ) { }
+  ) { } 
 
   ngOnInit() {
     if (this.authService.userRole == 1) {
