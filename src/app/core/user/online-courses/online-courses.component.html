@@ -1,0 +1,371 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!--Page title-->
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 d-inline-block mb-0">Online Courses</h6>
+
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-globe-asia text-dark"> </i> </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-md-12 col-lg-7">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Current Courses</h3>
+                </div>
+                <div class=" table-responsive">
+                    <table class=" table align-items-center table-flush">
+                        <thead class=" thead-light">
+                            <tr>
+                                <th scope="col">Title</th>
+
+                                <th scope="col">Status</th>
+
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Financial Analysis</th>
+                                <td>
+                                    <div class=" d-flex align-items-center">
+                                        <span class=" mr-2"> 60% </span>
+
+                                        <div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-info btn-sm" (click)="goDetail()">View</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Become a Probability & Statistics Master</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="mr-2">70%</span>
+                                        <div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 70%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-info btn-sm" (click)="goDetail()">View</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">SEO Tricks & Hacks</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="mr-2">80%</span>
+                                        <div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-gradient-primary" role="progressbar"
+                                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 80%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-info btn-sm" (click)="goDetail()">View</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Python for Beginners</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="mr-2">75%</span>
+                                        <div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-gradient-info" role="progressbar"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 75%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-info btn-sm" (click)="goDetail()">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Reminder</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class=" table align-items-center table-flush">
+                        <thead class=" thead-light">
+                            <tr>
+                                <th scope="col">Title</th>
+
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Python for Beginners</th>
+                                <td>
+                                    <span class="badge badge-warning">30 minutes left</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Financial Analysis </th>
+                                <td>
+                                    <span class="badge badge-warning">127 minutes left</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SEO Tricks & Hacks</th>
+                                <td>
+                                    <span class="badge badge-warning">214 minutes left</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-5">
+            <div class="card card-profile">
+                <img alt="Image placeholder" class="card-img-top" src="assets/img/theme/img-1-1000x600.jpg" />
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <a>
+                                <img class="rounded-circle bg-blue" src="assets/img/icons/cup.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-sm btn-info mr-4" href="javascript:void(0)">
+                            Connect
+                        </a>
+
+                        <a class="btn btn-sm btn-default float-right" href="javascript:void(0)">
+                            Message
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body pt-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-profile-stats d-flex justify-content-center">
+                                <div>
+                                    <span class="heading"> 22 </span>
+
+                                    <span class="description"> Course Taken </span>
+                                </div>
+
+                                <div>
+                                    <span class="heading"> 5 </span>
+
+                                    <span class="description"> Course Completed </span>
+                                </div>
+
+                                <div>
+                                    <span class="heading"> 17  </span>
+
+                                    <span class="description"> Course Pending </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <h5 class="h3">
+                            Badges
+                        </h5>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="#!" class="avatar avatar-xl rounded-circle bg-green">
+                                    <img alt="Image placeholder" src="assets/img/icons/medal-1.svg">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#!" class="avatar avatar-xl rounded-circle bg-green">
+                                    <img alt="Image placeholder" src="assets/img/icons/medal-2.svg">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="#!" class="avatar avatar-xl rounded-circle bg-green">
+                                    <img alt="Image placeholder" src="assets/img/icons/medal-3.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Current Courses</h3>
+                </div>
+                <div class=" table-responsive">
+                    <table class=" table align-items-center table-flush">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>
+                                    Microsoft Office 2019 Training
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>
+                                    Think Like a Leader
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3.</th>
+                                <td>
+                                    Powerful Speaking
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4.</th>
+                                <td>
+                                    How to Make a First Great Impression
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5.</th>
+                                <td>
+                                    Punctuation Mastery
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Scoreboard</h3>
+                </div>
+                <div class="dataTables_wrapper py-4">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_length" id="datatable_length">
+                                <label>
+                                    Show
+                                    <select 
+                                        name="datatable_length"
+                                        aria-controls="datatable"
+                                        class="form-control form-control-sm"
+                                        (change)="entriesChange($event)"
+                                    >
+                                        <option value="5" [selected]="tableEntries==5">5</option>
+                                        <option value="10" [selected]="tableEntries==10">10</option>
+                                        <option value="15" [selected]="tableEntries==15">15</option>
+                                        <option value="-1" [selected]="tableEntries==-1">All</option>
+                                    </select>
+                                    records
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div id="datatable_filter" class="dataTables_filter">
+                                <label>
+                                    <input 
+                                        type="search"
+                                        class="form-control form-control-sm"
+                                        placeholder="Search records"
+                                        aria-controls="datatable"
+                                        (keyup)="filterTable($event)" 
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ngx-datatable 
+                        class="bootstrap selection-cell"
+                        [columnMode]="'force'"
+                        [headerHeight]="50"
+                        [footerHeight]="50" 
+                        [rowHeight]="'auto'"
+                        [limit]="tableEntries != -1 ? tableEntries:undefined"
+                        [rows]="tableTemp" 
+                        (activate)="onActivate($event)"
+                    >
+
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>No.</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.id}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>Name</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.name}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Title"></ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>Courses Taken</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.course}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>Rewarded Points</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.point}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                    </ngx-datatable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

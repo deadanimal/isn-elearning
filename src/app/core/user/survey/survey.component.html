@@ -1,0 +1,130 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!--Page title-->
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 d-inline-block mb-0">Survey</h6>
+
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-poll-h text-dark"> </i> </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h4 class="m-0">Survey</h4>
+                        </div>
+                        <div class="col-auto">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                (click)="send()">Send</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Question</th>
+                                <th scope="col">Low</th>
+                                <th scope="col">Moderate</th>
+                                <th scope="col">High</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>Are you familiar with Microsoft Office?</td>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                            class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline1"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline2"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline3"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>Do you have any soft skill?</td>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadioInline12" name="customRadioInline12"
+                                            class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline12"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline13" name="customRadioInline12"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline13"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline14" name="customRadioInline12    "
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline14"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3.</th>
+                                <td>What is your time management score?</td>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadioInline23" name="customRadioInline23"
+                                            class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadioInline23"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline22" name="customRadioInline23"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline22"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline24" name="customRadioInline23"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline24"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,214 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Overview</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fab fa-discourse text-dark"> </i> </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)" class="text-dark"> Training </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Overview
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="col-lg-6 col-5 text-right">
+					<a class="btn btn-sm btn-neutral" (click)="openModal(createTraining)">
+						New Training
+					</a>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Training List</h3>
+                </div>
+                <div class="dataTables_wrapper py-4">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_length" id="datatable_length">
+                                <label>
+                                    Show
+                                    <select 
+                                        name="datatable_length"
+                                        aria-controls="datatable"
+                                        class="form-control form-control-sm"
+                                        (change)="entriesChange($event)"
+                                    >
+                                        <option value="5" [selected]="tableEntries==5">5</option>
+                                        <option value="10" [selected]="tableEntries==10">10</option>
+                                        <option value="15" [selected]="tableEntries==15">15</option>
+                                        <option value="-1" [selected]="tableEntries==-1">All</option>
+                                    </select>
+                                    records
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div id="datatable_filter" class="dataTables_filter">
+                                <label>
+                                    <input 
+                                        type="search"
+                                        class="form-control form-control-sm"
+                                        placeholder="Search records"
+                                        aria-controls="datatable"
+                                        (keyup)="filterTable($event)" 
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ngx-datatable 
+                        class="bootstrap selection-cell"
+                        [columnMode]="'force'"
+                        [headerHeight]="50"
+                        [footerHeight]="50" 
+                        [rowHeight]="'auto'"
+                        [limit]="tableEntries != -1 ? tableEntries:undefined"
+                        [rows]="tableTemp" 
+                        (activate)="onActivate($event)"
+                    >
+
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>Training ID</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.id_training}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="Title"></ngx-datatable-column>
+                        <ngx-datatable-column name="Participant"></ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>Start Date</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.start}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>End Date</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.end}}
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span>Status</span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <span *ngIf="row.status == 'Open'" class="badge badge-pill badge-success">Open</span>
+                                <span *ngIf="row.status == 'Closed'" class="badge badge-pill badge-danger">Closed</span>
+                                <span *ngIf="row.status == 'Postponed'" class="badge badge-pill badge-warning">Postponed</span>
+                            </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column>
+                            <ng-template ngx-datatable-header-template>
+                                <span></span>
+                            </ng-template>
+                            <ng-template let-row="row" ngx-datatable-cell-template>
+                                <button type="button" class="btn btn-primary btn-sm" (click)="goDetail()">View</button>
+                            </ng-template>
+                        </ngx-datatable-column>
+                    </ngx-datatable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #createTraining>
+    <div class="modal-header bg-default">
+        <h6 class="modal-title text-white my-auto" id="modal-title-default">
+            Create New Training
+        </h6>
+
+        <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            <span aria-hidden="true" class="text-white my-auto"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="form-control-label">Title</label>
+            <input 
+              class="form-control"
+              placeholder="Enter title"
+              type="text"
+            >
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">Email</label>
+            <input 
+              class="form-control"
+              placeholder="Enter email"
+              type="text"
+            >
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">Start Date</label>
+                    <input
+                        class="form-control"
+                        placeholder="Enter start date"
+                        type="date"
+                    >
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="form-control-label">End Date</label>
+                    <input
+                        class="form-control"
+                        placeholder="Enter end date"
+                        type="date"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button 
+            class="btn btn-success"
+            type="button"
+            (click)="confirm()"
+        >
+            Register
+        </button>
+
+        <button
+            class="btn btn-outline-danger ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            Close
+        </button>
+    </div>
+</ng-template>
