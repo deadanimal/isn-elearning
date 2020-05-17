@@ -182,7 +182,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     }
 
 
-    createLine("(Price)", [
+    createLine("(Training)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 57 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 27 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 24 },
@@ -194,7 +194,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 59, "opacity": 1 }
     ], colors.getIndex(0));
 
-    createColumn("(Turnover)", [
+    createColumn("(Exam)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 22 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 25 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 40 },
@@ -213,7 +213,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       { "category": "HR", "value": 165 }
     ], colors.getIndex(0));
 
-    createLine("(Price)", [
+    createLine("(Training)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 22 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 25 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 40 },
@@ -225,7 +225,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 33, "opacity": 1 }
     ], colors.getIndex(1));
 
-    createColumn("(Turnover)", [
+    createColumn("(Exam)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 57 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 27 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 24 },
@@ -244,7 +244,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       { "category": "Data 4", "value": 200 }
     ], colors.getIndex(1));
 
-    createLine("(Price)", [
+    createLine("(Training)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 16 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 62 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 55 },
@@ -256,7 +256,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 30, "opacity": 1 }
     ], colors.getIndex(2));
 
-    createColumn("(Turnover)", [
+    createColumn("(Exam)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 50 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 51 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 62 },
@@ -277,7 +277,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     // FB
 
-    createLine("(Price)", [
+    createLine("(Training)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 52 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 55 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 35 },
@@ -289,7 +289,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       { "date": new Date(2018, 0, 1, 16, 0, 0), "value": 15, "opacity": 1 }
     ], colors.getIndex(3));
 
-    createColumn("(Turnover)", [
+    createColumn("(Exam)", [
       { "date": new Date(2018, 0, 1, 8, 0, 0), "value": 20 },
       { "date": new Date(2018, 0, 1, 9, 0, 0), "value": 20 },
       { "date": new Date(2018, 0, 1, 10, 0, 0), "value": 25 },
@@ -317,19 +317,19 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     chart.data = [
       {
-        item: "Lights",
+        item: "Data A",
         value: 40
       },
       {
-        item: "Fridge",
+        item: "Data B",
         value: 30
       },
       {
-        item: "TV",
+        item: "Data C",
         value: 20
       },
       {
-        item: "Washing Machine",
+        item: "Data D",
         value: 16
       }
     ];
